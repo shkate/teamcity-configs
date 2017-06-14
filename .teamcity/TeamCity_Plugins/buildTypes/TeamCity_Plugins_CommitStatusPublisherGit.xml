@@ -10,7 +10,7 @@
           <param name="goals" value="clean test" />
           <param name="maven.path" value="%teamcity.tool.maven.DEFAULT%" />
           <param name="pomLocation" value="pom.xml" />
-          <param name="target.jdk.home" value="%env.JDK_16%" />
+          <param name="target.jdk.home" value="%env.JRE_HOME%" />
           <param name="teamcity.step.mode" value="default" />
           <param name="userSettingsSelection" value="userSettingsSelection:default" />
         </parameters>
