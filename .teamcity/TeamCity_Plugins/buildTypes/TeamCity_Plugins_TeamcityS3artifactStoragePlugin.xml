@@ -3,6 +3,9 @@
   <name>teamcity-s3-artifact-storage-plugin</name>
   <description />
   <settings>
+    <options>
+      <option name="artifactRules" value="target/s3-artifact-storage.zip=&gt;plugin" />
+    </options>
     <parameters />
     <build-runners>
       <runner id="RUNNER_5" name="" type="Maven2">
