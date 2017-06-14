@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="714fdca9-c016-478e-891d-3e0e38e2520c" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/10.0/project-config.xsd">
+  <name>Compile</name>
+  <description />
+  <settings>
+    <options>
+      <option name="artifactRules" value="build/artifacts/teamcity_branches_test_jar/teamcity-branches-test.jar=&gt;artifacts" />
+    </options>
+    <parameters />
+    <build-runners>
+      <runner id="RUNNER_1" name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content" value="echo 'Compiling sources...'" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_3" name="" type="JPS">
+        <parameters>
+          <param name="artifactsToBuild" value="teamcity-branches-test:jar" />
+          <param name="iprInfoRunParam"><![CDATA[<iprInfo path-to-ipr="" should-load-iml="true" should-load-run-configurations="false" should-load-artifacts="false">
+  <Jdk name="1.8" is-used="true" type="JavaSDK" path-to-jdk="%env.JRE_HOME%">
+    <Pattern value="jre/lib/*.jar" />
+    <Pattern value="jre/lib/ext/jfxrt.jar" />
+    <ExternalAnnotationPattern value="%teamcity.tool.idea%/lib/jdkAnnotations.jar" />
+  </Jdk>
+</iprInfo>]]></param>
+          <param name="jvmArgs" value="-Xmx256m" />
+          <param name="teamcity.step.mode" value="default" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings>
+      <vcs-entry-ref root-id="TeamCity_TeamcityBranchesTestGit" />
+    </vcs-settings>
+    <requirements />
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+
