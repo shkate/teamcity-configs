@@ -21,6 +21,10 @@
         <revisionRule name="lastSuccessful" revision="latest.lastSuccessful" />
         <artifact sourcePath="plugin/teamcity-google-agent-*.jar=&gt;plugins" />
       </dependency>
+      <dependency id="ARTIFACT_DEPENDENCY_2" sourceBuildTypeId="TeamCity_Plugins_TeamcityS3artifactStoragePlugin" cleanDestination="false">
+        <revisionRule name="lastSuccessful" revision="latest.lastSuccessful" />
+        <artifact sourcePath="plugin/s3-artifact-storage.zip=&gt;plugins" />
+      </dependency>
     </artifact-dependencies>
     <dependencies>
       <depend-on sourceBuildTypeId="TeamCity_Compile">
