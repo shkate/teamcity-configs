@@ -3,6 +3,9 @@
   <name>teamcity-google-agent</name>
   <description />
   <settings>
+    <options>
+      <option name="artifactRules" value="build/libs/teamcity-google-agent-*.jar=&gt;plugin" />
+    </options>
     <parameters />
     <build-runners>
       <runner id="RUNNER_6" name="" type="gradle-runner">
