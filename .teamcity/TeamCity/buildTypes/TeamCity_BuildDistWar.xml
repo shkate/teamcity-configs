@@ -7,7 +7,7 @@
     <build-runners>
       <runner id="RUNNER_2" name="" type="simpleRunner">
         <parameters>
-          <param name="script.content" value="echo 'Building war...'" />
+          <param name="script.content" value="echo 'Building war... %env.this_parameter_should_not_be_there%'" />
           <param name="teamcity.step.mode" value="default" />
           <param name="use.custom.script" value="true" />
         </parameters>
